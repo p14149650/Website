@@ -1,18 +1,1 @@
 /* Setting styles for body and header */
-Body {
-  margin:0;
-  padding:0;
-  background: #2ECC40;
-}
-header {
-  background: #3b5998;
-  color: #39CCCC;
-  text-align: center;
-}
-h1 {
-  font-size: 1.9em;
-  margin: 0;
-  padding: 1em;
-}
-h2 {
-  font-size: 1.5em;
