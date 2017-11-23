@@ -1,51 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<!--
-      The title of the header will contain my name
-     
-    -->
+
 <head>
-   <Title>Ravi Kumar's Resume</title>
-   <meta charset="UTF-8" />
-   <link rel="stylesheet" href="styles.css" type="text/css" />
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Ravi's Resume</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Font Awesome icon cheatsheet: http://fontawesome.io/cheatsheet/ -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="body">
-<!--
-      The header will be displayed on the web page as the title
-     
+<body>
+
+  <header>
+    <h1>Welcome to Ravi Kumar's Resume</h1>
+  </header>
+
+  <main class="tab_container">
+    
+    <!--
+      THE TABS
+      the 'checked' attribute determines which tab will show when the page loads
+      the actual radio buttons for the input tag are hidden in the CSS
     -->
-  <header class="mainHeader">
-	 
-     <nav><ul>
-  <!--
-      unordered and ordered list items for navigation
-     
-    -->
-      <li><a href="#">Personal Profile</a></li>
-      <li><a href="#">Education History</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Common interests</a></li>
-  </ul></nav>
-  
-</header>
-  
-  <div class="mainContent"
-      <div class "content">
-	         <article class="bottomcontent">
-		     <header>
-                 <h2><a href="#" title="Ravi's Resume">Ravi's Resume post</a></h2>
-			 </header>
-			 
-			 <footer>
-			     <p class="cv-info">This CV is written by Ravi</p>
-			 </footer>
-			 <!--
-      content goes here
-     
-    -->
-			 <content>
+    <input id="tab1" type="radio" name="tabs" checked>
+    <!-- the *label* for the radio button forms the clickable tabs -->
+    <label for="tab1"><i class="fa"></i><span>Personal Profile</span></label>
+
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2"><i class="fa"></i><span>Common Interests</span></label>
+
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3"><i class="fa"></i><span>Skills</span></label>
+	
+
+    <!-- content for tab 1: personal profile -->
+    <section id="content1" class="tab-content">
+      <header>
+        <h2>Personal Profile</h2>
+      </header>
+
+  <content>
 			     <p>A final year student at De Montfort University studying BSc (Hons) Information and communication Technology 
 				 seeking a graduate opportunity in both technology and the IT sector. 
 				 I have excellent communication skills and have had experience of visiting different client sites, assessing their needs 
@@ -58,43 +53,64 @@
           </article>
         </div>	
      </div>
-	 
-	 <aside class="top-sidebar">
-	     <article>
-		     <h2>Top sidebar</h2>
-			 <p>About me</p>
-			 </article>
-	 </aside>
-	 
-	 <aside class="middle-sidebar">
-	     <article>
-		     <h2>Middle-sidebar?</h2>
-			 <p>Birmingham</p>
-			 </article>
-	 </aside>
-	 
-	 <aside class="Bottom-sidebar">
-	     <article>
-		     <h2>Bottom sidebar</h2>
-			 <p>MY IT skills at De Montfort</p>
-			 </article>
-	 </aside>
-	 <!--
-     Footer
-     
-    -->
-	 <footer class="MainFooter"
-	     <p>Copyright &copy; <a href="#" title="RaviKumar">Ravi Kumar</a></p>
-	 </footer>
-	 
+
+      <footer>
+        <p><a href="#">Ravi Kumar/a></p>
+      </footer>
+    </section>
+
+    <!-- content for tab 2: Common interests -->
+    <section id="content2" class="tab-content">
+      <header>
+        <h2>Common Interests</h2>
+      </header>
+
+      <ul>
+        <!-- 5 li tags -->
+      <ol>
+   <li>the function of CSS</li>
+   <li>the document content</li>
+   <li>the different rendering methods</li>
+   <li>4The color Property Isn’t Just for Text</li>
+   <li>5The visibility Property Can Be Set to “collapse</li>
+</ol>
+
+<ul>
+      <footer>
+        <p>add a link to a CSS resource (see the HTML link above)</p>
+      </footer>
+    </section>
+
+    <!-- content for tab 3: Skills-->
+    <section id="content3" class="tab-content">
+      <header>
+        <h2>Skills</h2>
+      </header>
+
+      <dl>
+        <!-- 5 pairs of dt and dd tags -->
+		
+   <dt></dt>
+   <dd></dd>
+   <dt></dt>
+   <dd></dd>
+   <dt></dt>
+   <dd></dd>
+   <dt></dt>
+   <dd></dd>
+   <dt></dt>
+   <dd></dd> 
+   
+</dl>
+      </dl>
+
+      <footer>
+        <p>add a link to a JavaScript resource</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- adapted from a CodePen by Thierry Koblentz: http://cssmojo.com/pure-css-tab-panel/ -->
 </body>
 </html>
-  
- 
-
-	
-	
-
-
-
-

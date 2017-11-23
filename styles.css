@@ -1,148 +1,142 @@
-/* Setting styles for body and header */
-
 body {
-  background-image:url(images/Background.jpg);
+   background-image:url(images/Background.jpg);
   colour: #d4ac6e;
   font-size: 87.5%;
   font-family Arial, 'Lucida Sans unicode';
   line-height: 1.5;
   text-align: left;
+}
+h1 {
+  font-size: 1.25em;
+  text-align: center;
+  background: #52b5ff
+  color: #36802d;
+  margin: 0;
+  padding: 0.5em;
+}
+h2 {
+  margin-top: 3;
+}
+footer a:link,
+footer a:visited {
+  color: #444;
+}
+footer a:hover {
+  color: #fff;
+}
+
+
+/*
+  Hides the radio buttons ('input' tags) themselves, but not
+  their labels, which form the tabs.
+  
+  Also sets styles for the section tags and hides them.
+*/
+input,
+section {
+  display: none;
+  padding: 1em;
+  clear: both;
+}
+section footer {
+  position: absolute;
+  bottom: 0;
+  background: #ccc;
+  width: 100%;
+  margin-left: -1em;
+}
+section footer p {
+  padding: 0 1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+/*
+  displays and styles 'label' tags (for radio button 'input' tags)
+*/
+label {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  color: #36802d;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: #eee;
+  line-height: 3em;
+  border-right: 1px solid #444;
+}
+/* hides the tab text but leaves the icons visible: */
+label span {
+  display: none;
+}
+label:last-child {
+  border-right: none;
+}
+
+/*
+  The label tags display the different sections with 3 types of content ranges
+  and the radio buttons have been checked
+
+  Used the follwoing website to obtain the css tabs:
+  http://www.w3schools.com/cssref/sel_gen_sibling.asp
+*/
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
+/*
+  Styles label elements (tabs) *only* when they're 'checked'
+*/
+[id^="tab"]:checked + label {
+  background: #48cfad;
+  color: #ED5565;
+}
+[id^="tab"]:checked + label .fa {
+  color: #E53935;
+}
+
+.tab-content {
+  background: #B22222;
+  color: #eee;
+}
+.fa {
+  margin-right: 10px;
+}
+
+
+/* --------- Basic animation --------- */
+/*
+  this can all be commented out without
+  affecting the functionality of the tabs
+*/
+
+.tab_container section * {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+
+  0% { 
+  	opacity: 0;
+  }
+
+  100% { 
+  	opacity: 1;
+  }
   
 }
 
-a {
-	text-decoration: none;
-}
 
-a:link, a:visited {
-}
+/* --------- Basic responsive breakpoint --------- */
 
-a: hover, a:active {
-	
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+  /* shows the tab text and the icons: */
+  label span {
+    display: inline;
+  }
 }
- .body {
-	margin: 0 auto;
-	width: 70%;
-	clear: both;
-}
-
-.mainHeader img {
-	width: 29%;
-	height: auto;
-	margin: 2% 0;
-}
-
-.mainHeader nav {
-	background-color: #f3f3f3;
-	height: 40px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-
-.mainHeader nav ul {
-	list-style: none;
-	margin: 0 auto;
-}
-
-.mainHeader nav ul li {
-	float: left;
-	display: inline;
-}
-
-.mainHeader nav a:link, .mainHeader nav a:visited {
-	color: #0000ff;
-	display: inline-block;
-	padding: 10px 20px;
-}
-
-.mainHeader nav a:hover, .mainHeader nav a:active,
-.mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-	background-color: #b30000;
-	text-shadow: none;
-	
-}
-
-.mainContent {
-	line-height: 25px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	overflow: hidden;
-	
-}
-
-.content {
-	width: 70%;
-	float: left
-	
-}
-
-.topcontent {
-	background-color: #fff;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 3 5%;
-	margin-top: 2%;
-}
-.bottomcontent {
-	background-color: #fff;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 3 5%;
-	margin-top: 2%;
-	
-}
-
-.top-sidebar {
-	width: 27%;
-	float: left;
-	background-color: #fff;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	margin-left: 3%;
-	margin-bottom: 2%;
-	margin-top: 2%;
-	margin: 2% 0 2% 3%;
-	padding: 2% 3%;
-}
-.middle-sidebar {
-	width: 27%;
-	float: left;
-	background-color: #fff;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 2% 3%;
-}
-.bottom-sidebar {
-	width: 27%;
-	float: left;
-	background-color: #fff;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 2% 3%;
-}
-.mainFooter {
-	width: 100%;
-	float: left;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	background-color: #666;
-	margin-top:2%;
-	margin-bottom 2%;
-}
-.mainfooter p {
-	width: 92%;
-	margin: 2% auto;
-	
-}
-
-
-
-
