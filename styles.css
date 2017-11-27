@@ -1,0 +1,75 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+html, body{
+	height:100%;
+}
+
+nav {
+	height:50px;
+	background:rgba(0,0,0,.5);
+	width:100%;
+	position:fixed;
+	z-index:99;
+}
+nav a{
+	text-decoration:none;
+	color: #f7786b;
+	margin-left:35px;
+	line-height:50px
+		
+}
+
+h2,p{
+	margin-bottom:20px;
+	padding:10px;
+}
+
+p{
+	line-height:30px;
+	font-family:arial;
+}
+
+.section{
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.subsection{
+	height: 20%;
+	background: #f7786b;	
+}
+.sec1{
+	background-image:url(images/Wood.jpg);
+}
+.sec2{
+	background-image:url(images/interests.jpg);
+}
+.sec3{
+	background-image:url(images/skills.png);
+}
+.sec4{
+	background-image:url(images/Wood.jpg);
+}
+
+
+
+
+
+/* --------- Basic responsive breakpoint --------- */
+
+@media only screen and (min-width: 700px) {
+  nav {
+    font-size: 1.5em;
+  }
+  /* shows the tab text and the icons: */
+  nav {
+    display: inline;
+  }
+}
+
+
