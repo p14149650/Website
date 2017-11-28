@@ -14,24 +14,43 @@ nav {
 	position:fixed;
 	z-index:99;
 }
-nav a{
-	text-decoration:none;
-	color: #f7786b;
-	margin-left:35px;
-	line-height:50px
-		
+ul {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+    
 }
+/* Style the links inside the navigation bar */
+ul li  {
+    list-style: none;
+	display: inline-block;
+	padding: 20px;
+}
+ul li:hover
+{
+    background-color: grey;
+}
+ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+
 
 h2,p{
 	margin-bottom:20px;
 	padding:10px;
 }
+h2{
+	color:#3e4444;
+}
 
 p{
 	line-height:30px;
 	font-family:arial;
+	color:green;
 }
-
+/* Style each subsections*/
 .section{
     height:100%;
     background-size:cover;
@@ -41,8 +60,28 @@ p{
 
 .subsection{
 	height: 20%;
-	background: #f7786b;	
+	background: #41f444;
+    padding-top: 50x;	
 }
+.subSection1{
+	background: #00ffc9;
+	box-sizing: border-box;
+}
+.subSection2{
+	background: #00ffc9;
+	box-sizing: border-box;
+}
+.subSection3{
+	background: #00ffc9;
+	box-sizing: border-box;
+}
+.subSection4{
+	background: #00ffc9;
+	box-sizing: border-box;
+}
+
+p.inset {border-style: inset;}
+
 .sec1{
 	background-image:url(images/Wood.jpg);
 }
@@ -55,21 +94,36 @@ p{
 .sec4{
 	background-image:url(images/Wood.jpg);
 }
+.sec5{
+	background-image:url(images/contact.jpg);
+}
+
+
 
 
 
 
 
 /* --------- Basic responsive breakpoint --------- */
-
-@media only screen and (min-width: 700px) {
-  nav {
-    font-size: 1.5em;
-  }
-  /* shows the tab text and the icons: */
-  nav {
-    display: inline;
-  }
+.toggle{
+	width:100%;
+	padding: 10px 20px;
+	background: #001f44;
+	text-align: right;
+	box-sizing: border-box;
+	color:#fff;
+	font-size:20px;
+    	
 }
+@media (max-width:768px)
+{
+     .toggle
+     {
+	display: block;
+     }
+}
+}
+
+
 
 
