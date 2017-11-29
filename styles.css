@@ -28,7 +28,7 @@ ul li  {
 }
 ul li:hover
 {
-    background-color: grey;
+    background-color: blue;
 }
 ul li a{
 	color: #fff;
@@ -80,7 +80,10 @@ p{
 	box-sizing: border-box;
 }
 
-p.inset {border-style: inset;}
+p.inset 
+{border-style: inset;
+ margin: 1 auto;
+}
 
 .sec1{
 	background-image:url(images/Wood.jpg);
